@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/links';
+import together from '../assets/images/AISA-Together-SM-Final-v01.jpeg';
+import care from '../assets/images/AISA-Care-SM-Final-v01-Large.jpeg';
+
+const whatsapp = 'https://chat.whatsapp.com/Et3lbbGQ3AbCW744qmuv0L';
+
+const pillars = [
+  { title: 'Educate', body: 'We learn together through programs, hackathons, events and discussions.' },
+  { title: 'Connect', body: 'We plug into a worldwide community of people dedicated to this problem.' },
+  { title: 'Support', body: 'We help each other make long-term plans to contribute through our careers, engagement or advocacy.' },
+];
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-line/60">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_70%_-10%,rgba(124,140,247,0.2),transparent_70%)]"></div>
+    <div class="pointer-events-none absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:54px_54px] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)]"></div>
+    <div class="relative mx-auto max-w-6xl px-5 py-24 sm:py-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">AI Safety Aachen e.V.</p>
+      <h1 class="mt-5 max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
+        Reducing catastrophic risks from <span class="text-accent">advanced AI</span>.
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-fg-muted">
+        We're a student initiative in Aachen promoting responsible AI development — empowering students and academics to
+        understand the risks of advanced AI, work on reducing them, and build the skills to make a difference.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href={whatsapp} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join us</a>
+        <a href={href('/cal')} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Weekly events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="mx-auto max-w-6xl px-5 py-20 sm:py-24">
+    <div class="grid gap-5 sm:grid-cols-3">
+      {pillars.map((p) => (
+        <div class="rounded-2xl border border-line/60 bg-ink-soft p-6">
+          <h3 class="text-lg font-semibold text-accent">{p.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-fg-muted">{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="border-y border-line/60 bg-ink-soft">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-24 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What we do</h2>
+        <p class="mt-5 leading-relaxed text-fg-muted">
+          AI Safety Aachen is a student initiative dedicated to reducing the risks posed by advanced AI systems. We aim
+          to empower students and academics in Aachen to address this pressing problem — learning about the risks
+          together, working out how to reduce them, and developing the skills to contribute.
+        </p>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-3xl bg-accent/10 blur-2xl"></div>
+        <Image src={together} alt="The AI Safety Aachen community" widths={[480, 800]} class="relative w-full rounded-2xl border border-line/60 object-cover shadow-[var(--shadow-glow)]" />
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Safety explainer -->
+  <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-24 lg:grid-cols-2">
+    <div class="order-2 lg:order-1">
+      <Image src={care} alt="Caring about safe AI" widths={[480, 800]} class="w-full rounded-2xl border border-line/60 object-cover" />
+    </div>
+    <div class="order-1 lg:order-2">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Why AI safety</h2>
+      <p class="mt-5 leading-relaxed text-fg-muted">
+        AI is advancing rapidly and brings huge potential for good. But in a recent survey, 48% of AI experts put the
+        risk of human extinction from AI at more than 10%
+        (<a href="https://aiimpacts.org/what-do-ml-researchers-think-about-ai-in-2022/" class="text-accent hover:underline">Grace et al, 2022</a>).
+        Companies are racing to deploy frontier models while the underlying technology remains largely a black box, with
+        no rigorous theory of how to make these systems safe. We believe there are still fundamental questions to answer
+        to ensure advanced AI is beneficial rather than harmful.
+      </p>
+      <a href="https://www.cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning/" class="mt-6 inline-block font-semibold text-accent hover:underline">Introduction to AI safety →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-line/60 bg-gradient-to-b from-ink-soft to-ink">
+    <div class="mx-auto max-w-3xl px-5 py-20 text-center">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Want to find out more?</h2>
+      <p class="mt-4 text-fg-muted">Check out our flyer, or come along to one of our weekly events — everyone is welcome.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={whatsapp} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join us</a>
+        <a href="https://flyer.felkru.com/" class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Read the flyer</a>
+      </div>
+    </div>
+  </section>
+</Base>

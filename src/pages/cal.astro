@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const calSrc =
+  'https://calendar.google.com/calendar/embed?src=dae098c2b2bee1021376a1b31b0f124af5e74a6e00d3b23a61deaa744f71e0f3%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA&bgcolor=%230a1320&showTitle=0&showPrint=0&showCalendars=0';
+const whatsapp = 'https://chat.whatsapp.com/Et3lbbGQ3AbCW744qmuv0L';
+---
+
+<Base title="Events" description="Our upcoming events — talks, reading groups, hackathons and more. Just come to one of our next meetups.">
+  <PageHero
+    eyebrow="Calendar"
+    title="Come to one of our next meetups"
+    lead="We meet regularly for talks, reading groups, hackathons and discussions. Everyone is welcome."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <div class="overflow-hidden rounded-2xl border border-line/60 bg-surface">
+      <iframe
+        src={calSrc}
+        title="AI Safety Aachen events calendar"
+        class="h-[600px] w-full"
+        style="border:0"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="mt-10 flex justify-center">
+      <a href={whatsapp} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join the WhatsApp group</a>
+    </div>
+  </section>
+</Base>

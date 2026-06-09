@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Prose from '../components/Prose.astro';
+
+const mail = 'mailto:mail@aisafetyaachen.org';
+---
+
+<Base title="Grants" description="AI Safety Aachen e.V. funds individuals working to reduce risks from advanced AI. Förderrunde 2026 — applications open.">
+  <PageHero
+    eyebrow="Förderrunde 2026"
+    title="AI Safety Grants"
+    lead="We fund individuals working to reduce risks from advanced AI systems. A small, fast-moving fund — decisions within four weeks, bureaucracy kept to a minimum."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <Prose>
+      <p>
+        AI Safety Aachen e.V. is a registered nonprofit based in Aachen, Germany, dedicated to advancing research and
+        education in AI safety. We're now accepting applications for research grants.
+      </p>
+      <p>
+        Grants are tax-free under §3 Nr. 44 EStG and do not count toward the income thresholds that determine
+        eligibility for statutory health insurance (gesetzliche Kranken&shy;versicherung / Familienversicherung). For
+        students and researchers in Germany, this means you can receive a grant without affecting your insurance status.
+      </p>
+
+      <h2>What we fund</h2>
+      <p>We support work across the full spectrum of AI safety, including but not limited to:</p>
+      <h3>Research areas</h3>
+      <ul>
+        <li>Technical alignment and interpretability</li>
+        <li>AI evaluations and auditing</li>
+        <li>AI control and oversight mechanisms</li>
+        <li>Governance, policy, and regulatory frameworks for advanced AI</li>
+        <li>Technical governance — how technology places pressure on or undermines existing laws, decision-making and democratic structures, and how to address it</li>
+        <li>AI and democracy — disinformation, algorithmic influence, automated decision systems in public contexts, and strengthening democratic resilience</li>
+        <li>Biosecurity, autonomous weapons, nuclear risk prevention and other intersections with catastrophic risk</li>
+      </ul>
+      <h3>Funding types</h3>
+      <p>We're flexible on what costs we cover. Examples include:</p>
+      <ul>
+        <li><strong>Living stipend</strong> — to free up time for research during a defined period</li>
+        <li><strong>Compute</strong> — cloud credits (AWS, GCP, Azure, RunPod, etc.) or a contribution toward local hardware</li>
+        <li><strong>Software and API access</strong> — subscriptions, model API credits, research tools</li>
+        <li><strong>Literature and courses</strong> — books, course fees, database access</li>
+      </ul>
+      <p>
+        If you're unsure whether your costs qualify, just describe them in the application — we'd rather see a creative
+        but honest cost breakdown than a conservative one that underrepresents your actual needs.
+      </p>
+
+      <h2>Who should apply</h2>
+      <ul>
+        <li>Students (Bachelor's, Master's, PhD) working on AI safety</li>
+        <li>Independent researchers without institutional affiliation</li>
+        <li>Early-career researchers exploring AI safety full- or part-time</li>
+        <li>Practitioners transitioning into AI safety work</li>
+        <li>Participants in our upskilling programs who want to pursue independent research — no prior professional experience required</li>
+      </ul>
+      <p>
+        You don't need to be based in Germany or affiliated with a German institution; we fund individuals
+        internationally. You may not apply if you are currently registered as a member of AI Safety Aachen e.V. in the
+        Vereinsregister at the Amtsgericht Aachen, or if you currently hold a board position.
+      </p>
+
+      <h2>What we're looking for</h2>
+      <p>There's no fixed template for what we fund. We care most about:</p>
+      <ul>
+        <li><strong>Impact potential</strong> — does this work meaningfully reduce risks from advanced AI?</li>
+        <li><strong>Tractability</strong> — is it achievable in the proposed timeframe with the proposed resources?</li>
+        <li><strong>Exceptional ability</strong> — we fund talent, not credentials. That might be prior research or professional experience, but equally standout academic results achieved unusually fast, performance in competitions or upskilling programs, a track record of building things independently, or a demonstrated capacity to learn very quickly and execute.</li>
+        <li><strong>Cost-effectiveness</strong> — are the requested resources proportionate to the expected output?</li>
+      </ul>
+      <p>
+        We're open to early-stage and speculative work and don't require prior publications or institutional
+        credentials. We strongly encourage applicants to think about cost-efficiency — whether open-source or free-tier
+        alternatives exist, and whether costs can be shared with other programs. We won't penalize honest, well-reasoned
+        requests, but we do expect you to have thought about why each line item is necessary. All work enabled by the
+        stipend must be published under a free license and shared for public benefit.
+      </p>
+
+      <h2>How to apply</h2>
+      <p>Send the following to <a href={mail}>mail@aisafetyaachen.org</a> with the subject line "Grant Application — [Your Name]":</p>
+      <ul>
+        <li><strong>CV / Resume</strong> (PDF, any format)</li>
+        <li><strong>Research Proposal</strong> (max. 2 pages) — what you're working on and why it matters for AI safety; what you'll concretely do during the funding period; what success looks like</li>
+        <li><strong>Cost Breakdown</strong> — itemized requested funding with brief justification; proposed funding period; total amount requested</li>
+        <li><strong>Short cover note</strong> (optional, max. half a page)</li>
+      </ul>
+      <p>Applications are reviewed on a rolling basis. We aim to respond within four weeks of receiving a complete application.</p>
+
+      <h2>Questions</h2>
+      <p>
+        Reach out at <a href={mail}>mail@aisafetyaachen.org</a> before applying if you have questions about eligibility,
+        scope or fit. We're happy to give quick informal feedback on whether an application makes sense before you invest
+        time writing it up.
+      </p>
+
+      <hr />
+      <p class="text-sm">
+        AI Safety Aachen e.V. is a registered nonprofit (gemeinnütziger Verein) under German law. Grants are issued as
+        Forschungsstipendien pursuant to §3 Nr. 44 EStG and are tax-free for recipients in Germany. They do not count
+        toward the income thresholds relevant for statutory health insurance. Recipients are responsible for
+        understanding the tax and insurance implications in their own jurisdiction.
+      </p>
+    </Prose>
+
+    <div class="mt-10">
+      <a href={mail} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Apply by email</a>
+    </div>
+  </section>
+</Base>

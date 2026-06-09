@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const form = 'https://docs.google.com/forms/d/15KUYIc53lSEg8YTUHlTNS2hKHiFyxr2-TCBR1vLw2nw/viewform';
+---
+
+<Base title="Catalyst" description="The Catalyst Program — AI Safety Aachen's hands-on project track for students.">
+  <PageHero
+    eyebrow="Program"
+    title="The Catalyst Program"
+    lead="Our hands-on project track for students who have familiarized themselves with the basics of AI safety."
+  />
+
+  <section class="mx-auto max-w-3xl px-5 py-16">
+    <p class="text-lg leading-relaxed text-fg-muted">
+      Each semester, participants work on real projects — from building interactive demos for policymakers to running
+      capability evaluations and safety research. It's where the fundamentals turn into concrete, useful work.
+    </p>
+    <div class="mt-10">
+      <a href={form} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Apply to Catalyst</a>
+    </div>
+  </section>
+</Base>
