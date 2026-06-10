@@ -15,8 +15,9 @@ export const site = {
   more: [] as { label: string; href: string }[],
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ea_aachen/' },
-    { label: 'Flyer', href: 'https://flyer.felkru.com/' },
+    { label: 'WhatsApp', href: 'https://chat.whatsapp.com/Et3lbbGQ3AbCW744qmuv0L' },
   ],
   legal: [] as { label: string; href: string }[],
+  address: ['Hünefeldstraße 35', '52068 Aachen', 'Deutschland'],
   contactEmail: 'mail@aisafetyaachen.org',
 };

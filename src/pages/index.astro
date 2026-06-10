@@ -84,14 +84,28 @@ const pillars = [
     </div>
   </section>
 
+  <!-- Flyer -->
+  <section class="border-t border-line/60 bg-ink-soft">
+    <div class="mx-auto max-w-4xl px-5 py-20">
+      <div class="rounded-3xl border border-line/60 bg-gradient-to-br from-surface-2 to-ink-soft p-10 text-center shadow-[var(--shadow-glow)] sm:p-14">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Check out our flyer</h2>
+        <p class="mx-auto mt-4 max-w-xl leading-relaxed text-fg-muted">
+          A one-page overview of who we are, what we offer and how to get involved — from scholarships and career
+          counseling to expert talks and the Catalyst program.
+        </p>
+        <a href="https://flyer.felkru.com/" target="_blank" rel="noopener" class="mt-8 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Open the flyer →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="border-t border-line/60 bg-gradient-to-b from-ink-soft to-ink">
     <div class="mx-auto max-w-3xl px-5 py-20 text-center">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Want to find out more?</h2>
-      <p class="mt-4 text-fg-muted">Check out our flyer, or come along to one of our weekly events — everyone is welcome.</p>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Get involved</h2>
+      <p class="mt-4 text-fg-muted">Come along to one of our weekly events — everyone is welcome, whatever your background.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href={whatsapp} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join us</a>
-        <a href="https://flyer.felkru.com/" class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Read the flyer</a>
+        <a href={href('/cal')} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Weekly events</a>
       </div>
     </div>
   </section>

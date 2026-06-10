@@ -14,6 +14,11 @@ const explore = [...site.nav.filter((n) => n.href !== '/'), ...site.more];
         <span class="text-fg">{site.name}</span>
       </a>
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-fg-muted">{site.description}</p>
+      <address class="mt-5 text-sm not-italic leading-relaxed text-fg-muted">
+        <span class="font-medium text-fg">{site.name}</span><br />
+        {site.address.map((line) => (<Fragment>{line}<br /></Fragment>))}
+        <a href={`mailto:${site.contactEmail}`} class="transition hover:text-fg">{site.contactEmail}</a>
+      </address>
     </div>
 
     <div>
