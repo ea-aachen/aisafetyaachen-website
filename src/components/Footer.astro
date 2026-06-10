@@ -1,7 +1,7 @@
 ---
 import { site } from '../data/site';
 import { href } from '../lib/links';
-import Logo from './Logo.astro';
+import logo from '../assets/images/logo-weiss.png';
 const year = new Date().getFullYear();
 const explore = [...site.nav.filter((n) => n.href !== '/'), ...site.more];
 ---
@@ -9,9 +9,8 @@ const explore = [...site.nav.filter((n) => n.href !== '/'), ...site.more];
 <footer class="border-t border-line/60 bg-ink-soft">
   <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
     <div class="lg:col-span-2">
-      <a href={href('/')} class="flex items-center gap-2.5 font-semibold">
-        <Logo class="h-8 w-8 text-accent" />
-        <span class="text-fg">{site.name}</span>
+      <a href={href('/')} class="inline-block">
+        <img src={logo.src} width={logo.width} height={logo.height} alt={site.name} class="h-10 w-auto" />
       </a>
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-fg-muted">{site.description}</p>
       <address class="mt-5 text-sm not-italic leading-relaxed text-fg-muted">

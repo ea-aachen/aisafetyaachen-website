@@ -1,16 +1,15 @@
 ---
 import { site } from '../data/site';
 import { href } from '../lib/links';
-import Logo from './Logo.astro';
+import logo from '../assets/images/logo-weiss.png';
 const path = Astro.url.pathname.replace(/\/$/, '');
 const isActive = (h: string) => path === href(h).replace(/\/$/, '');
 ---
 
 <header class="sticky top-0 z-50 border-b border-line/60 bg-ink/80 backdrop-blur-md">
   <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5">
-    <a href={href('/')} class="flex items-center gap-2.5 font-semibold tracking-tight">
-      <Logo class="h-7 w-7 text-accent" />
-      <span class="text-fg">{site.shortName}</span>
+    <a href={href('/')} class="flex items-center">
+      <img src={logo.src} width={logo.width} height={logo.height} alt={site.name} class="h-9 w-auto" />
     </a>
 
     <div class="hidden items-center gap-7 md:flex">
