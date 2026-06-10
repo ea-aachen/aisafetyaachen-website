@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import { href } from '../lib/links';
 import together from '../assets/images/AISA-Together-SM-Final-v01.jpeg';
 import care from '../assets/images/AISA-Care-SM-Final-v01-Large.jpeg';
+import flyer from '../assets/images/flyer.png';
 
 const whatsapp = 'https://chat.whatsapp.com/Et3lbbGQ3AbCW744qmuv0L';
 
@@ -86,15 +87,29 @@ const pillars = [
 
   <!-- Flyer -->
   <section class="border-t border-line/60 bg-ink-soft">
-    <div class="mx-auto max-w-4xl px-5 py-20">
-      <div class="rounded-3xl border border-line/60 bg-gradient-to-br from-surface-2 to-ink-soft p-10 text-center shadow-[var(--shadow-glow)] sm:p-14">
-        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Check out our flyer</h2>
-        <p class="mx-auto mt-4 max-w-xl leading-relaxed text-fg-muted">
-          A one-page overview of who we are, what we offer and how to get involved — from scholarships and career
-          counseling to expert talks and the Catalyst program.
-        </p>
-        <a href="https://flyer.felkru.com/" target="_blank" rel="noopener" class="mt-8 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Open the flyer →</a>
-      </div>
+    <div class="mx-auto max-w-6xl px-5 py-20">
+      <h2 class="text-center text-3xl font-bold tracking-tight sm:text-4xl">Our flyer</h2>
+      <p class="mx-auto mt-4 max-w-xl text-center leading-relaxed text-fg-muted">
+        Who we are, what we offer and how to get involved — at a glance.
+      </p>
+      <a
+        href="https://flyer.felkru.com/"
+        target="_blank"
+        rel="noopener"
+        class="mt-10 block overflow-hidden rounded-2xl border border-line/60 shadow-[var(--shadow-glow)] transition hover:border-accent"
+      >
+        <Image
+          src={flyer}
+          alt="AI Safety Aachen flyer — about us, our offerings, and how to get involved"
+          widths={[768, 1152, 1920]}
+          sizes="(max-width: 1152px) 100vw, 1152px"
+          quality={90}
+          class="w-full"
+        />
+      </a>
+      <p class="mt-4 text-center text-sm text-fg-muted">
+        <a href="https://flyer.felkru.com/" target="_blank" rel="noopener" class="text-accent hover:underline">Open the full flyer →</a>
+      </p>
     </div>
   </section>
 
